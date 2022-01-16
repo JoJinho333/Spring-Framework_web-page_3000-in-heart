@@ -1,0 +1,47 @@
+{{>layout/header}}
+<h1> 가슴속 3천원 웹 서비스 </h1>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="/posts/save" role="button" class="btn btn-info">리뷰 등록</a>
+            {{#userName}}
+                Logged in as : <span id="user"> {{userName}}</span>
+                <a href="/logout" class="btn btn-warning" role="button">Logout</a>
+            {{/userName}}
+
+            {{^userName}}
+                <a href="/oauth2/authorization/google" class="btn btn-primary" role="button">Google Login</a>
+                <a href="/oauth2/authorization/naver" class="btn btn-success" role="button">Naver Login</a>
+            {{/userName}}
+        </div>
+    </div>
+
+    <br>
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th> 리뷰번호</th>
+            <th> 카테고리 </th>
+            <th> 가게 위치</th>
+            <th> 가격 </th>
+            <th> 평점 </th>
+            <th> 작성자 </th>
+            <th> 작성일 </th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/posts/update/{{id}}">{{category}}</a></td>
+                <td>{{place}}</td>
+                <td>{{price}}</td>
+                <td>{{review}}</td>
+                <td>{{author}}</td>
+                <td>{{date}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
+</div>
+{{>layout/footer}}

@@ -1,0 +1,52 @@
+{{>layout/header}}
+<h1> 리뷰 등록</h1>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <div class="form-group">
+
+                <label for="place">가게 위치</label>
+                <input type="text" class="form-control" id="place" placeholder="가게 위치를 입력하세요">
+            </div>
+            <div class="form-group">
+
+                <label for="price">가격</label>
+                <input type="text" class="form-control" id="price" placeholder="가격을 입력하세요">
+            </div>
+            <div class="form-group">
+
+                <label for="review">평점</label>
+                <input type="text" class="form-control" id="review" placeholder="간단한 평점을 내려주세요">
+            </div>
+            <div class="form-group">
+
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+            </div>
+            <div class="form-group">
+
+                <label for="content">내용</label>
+                <textarea class="form-control" id="content" placeholder="내용을 입력하시오"></textarea>
+            </div>
+            <div class="form-group">
+
+                <label for="date">작성일</label>
+                <input type="text" class="form-control" id="date" placeholder="작성일을 입력하세요">
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    </div>
+</div>
+
+{{>layout/footer}}

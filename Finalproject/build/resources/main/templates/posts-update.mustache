@@ -1,0 +1,47 @@
+{{>layout/header}}
+<h1> 리뷰 수정</h1>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="id">글 번호</label>
+                <input type="text" class="form-control" id="id" value="{{posts.id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="category">카테고리</label>
+                <input type="text" class="form-control" id="category" value="{{posts.category}}">
+            </div>
+            <div class="form-group">
+                <label for="place">가게 위치</label>
+                <input type="text" class="form-control" id="place" value="{{posts.place}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="price">가격</label>
+                <input type="text" class="form-control" id="price" value="{{posts.price}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="review">평점</label>
+                <input type="text" class="form-control" id="review" value="{{posts.review}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" value="{{posts.author}}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea class="form-control" id="content" value="{{posts.content}}"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">작성일</label>
+                <input type="text" class="form-control" id="date" value="{{posts.date}}" readonly>
+            </div>
+
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-update">수정</button>
+        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+    </div>
+</div>
+
+{{>layout/footer}}
